@@ -5,6 +5,10 @@ import { TaskStatus } from './task-status.enum';
 import { Injectable } from '@nestjs/common';
 import { FilterTasksDto } from './dto/filter-tasks.dto';
 
+// DB start
+// docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+// use pgAdmin4 and craete task-management database
+
 @Injectable()
 export class TasksRepository extends Repository<Task> {
   constructor(private dataSource: DataSource) {
